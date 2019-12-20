@@ -16,10 +16,23 @@
   </div>
 </div>
 
+<div id="publicize_book" class="container pa4">
+  <div class="fl w-50">
+    <h2 class="f2"><%= link_to "Arthur Smid", "https://arthursmid.com/", class: "db dark-blue dim" %></h2>
+    <p class="navy f4 ml3">A member of our brigade wrote a fictional novel about software developers -
+      <%= link_to "You Will Win The Future", "https://www.amazon.com/dp/B07W3JX6JX" %></p>
+  </div>
+  <div class="fl w-50">
+    <%= link_to "https://www.amazon.com/dp/B07W3JX6JX" do %>
+      <%= image_tag "you_will_win_the_future.jpg", alt: "You Will Win The Future" %>
+    <% end %>
+  </div>
+</div>
+
 <div class="container">
   <br>
   <div class="row">
-    <div class="col-md-8" style="color:black;">
+    <div class="col-md-8 bt ma4 black">
         <% if @meeting %>
           <h1> Next Meeting: <%= @meeting.title %> </h1>
           <h2>Our Next meeting is <%= @meeting.eventstart.to_time.strftime('%a %b %d') %> at, <%= @meeting.eventstart.to_time.strftime('%H:%M:') %> </h2>
